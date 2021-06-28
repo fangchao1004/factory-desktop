@@ -1,0 +1,57 @@
+{
+  "name": "factory-desktop",
+  "version": "2.0.0",
+  "description": "信息综合管理平台-11",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wosxieez/factory-desktop.git"
+  },
+  "keywords": [
+    "factory"
+  ],
+  "author": "coco (xez)",
+  "license": "ISC",
+  "homepage": "http://60.174.196.158:12345/#/",
+  "devDependencies": {
+    "electron": "^11.4.6",
+    "electron-builder": "^22.10.5"
+  },
+  "build": {
+    "appId": "cn.ixiaomu.xiaomei-test",
+    "artifactName": "${productName}-${version}.${ext}",
+    "copyright": "Copyright © 2017 - 2020 XiaoMu. All Rights Reserved. 小木软件 版权所有",
+    "productName": "信息综合管理平台-11-test",
+    "directories": {
+      "output": "./dist"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "./icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "./icon.ico"
+    },
+    "dmg": {
+      "contents": [
+        {
+          "x": 410,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        },
+        {
+          "x": 130,
+          "y": 150,
+          "type": "file"
+        }
+      ]
+    }
+  }
+}

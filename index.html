@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <script type="text/javascript">
+    console.log('hello')
+    console.log('window.require', window.require)
+    console.log('1window.electron', window.electron)
+    const item = window.require('electron')
+    console.log('item', item)
+    function hello() {
+      console.log(window.electron)
+    }
+  </script>
+  <button onclick="hello()"></button>
+</body>
+
+</html>
